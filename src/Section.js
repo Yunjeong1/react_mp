@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from './Card';
+import Btns from './Btns';
 
 const path = process.env.PUBLIC_URL;
 const arr = [
@@ -15,15 +16,7 @@ const arr = [
 const len = arr.length;
 
 function Section() {
-	let [num, setNum] = useState(0);
 	const wrap = useRef(null);
-	const rotate = () => {
-		wrap.current.style.transform = `rotate(${45 * num}deg)`;
-	};
-	useEffect(() => {
-		console.log('rotate');
-		rotate(num);
-	}, [num]);
 
 	return (
 		<>
@@ -34,19 +27,7 @@ function Section() {
 					);
 				})}
 			</section>
-
-			<a
-				href='#'
-				className='prev'
-				onClick={() => {
-					setNum(++num);
-				}}></a>
-			<a
-				href='#'
-				className='next'
-				onClick={() => {
-					setNum(--num);
-				}}></a>
+			<Btns wrap={wrap} />
 		</>
 	);
 }
