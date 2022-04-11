@@ -5,7 +5,7 @@ function Card(props) {
 		<article
 			style={{
 				transform: `rotate(${
-					(360 / props.num) * props.index
+					(360 / props.length) * props.index
 				}deg) translateY(-180%)`,
 			}}>
 			<div className='inner'>
