@@ -16,11 +16,18 @@ const num = arr.length;
 
 function Section() {
 	return (
-		<section className='wrap'>
-			{arr.map((data, idx) => {
-				return <Card key={idx} path={path} data={data} index={idx} num={num} />;
-			})}
-		</section>
+		<>
+			<section className='wrap'>
+				{arr.map((data, idx) => {
+					return (
+						<Card key={idx} path={path} data={data} index={idx} num={num} />
+					);
+				})}
+			</section>
+
+			<a href='#' className='prev'></a>
+			<a href='#' className='next'></a>
+		</>
 	);
 }
 
