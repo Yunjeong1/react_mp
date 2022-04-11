@@ -1,5 +1,51 @@
 @import 'reset';
 
-h1 {
-	color: aqua;
+#root {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background: linear-gradient(45deg, hotpink, violet);
+
+	.wrap {
+		width: 300px;
+		height: 450px;
+		border: 1px solid aquamarine;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -150px;
+		margin-left: -220px;
+
+		article {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			.inner {
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+
+				.pic {
+					width: 220px;
+					height: 220px;
+					border-radius: 50%;
+					overflow: hidden;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
 }
